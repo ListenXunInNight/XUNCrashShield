@@ -10,33 +10,22 @@ Pod::Spec.new do |s|
   s.name             = 'XUNCrashShield'
   s.version          = '0.1.0'
   s.summary          = 'A short description of XUNCrashShield.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
   s.description      = <<-DESC
     A tiny shield for crash online. 一个防止线上 80% crash 的轻微的防御盾。
                        DESC
 
   s.homepage         = 'https://github.com/ListenXunInNight/XUNCrashShield'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Xun' => 'listenxun@gmail.com' }
   s.source           = { :git => 'https://github.com/ListenXunInNight/XUNCrashShield.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'XUNCrashShield/Classes/**/*'
+  s.source_files = ['XUNCrashShield/Classes/**/**']
   
   # s.resource_bundles = {
   #   'XUNCrashShield' => ['XUNCrashShield/Assets/*.png']
   # }
 
-  s.public_header_files = 'XUNCrashShield/Classes/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+s.public_header_files = ['XUNCrashShield/Classes/**/**.h', 'XUNCrashShield/Classes/**.h']
 end

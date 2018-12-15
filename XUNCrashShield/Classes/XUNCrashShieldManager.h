@@ -19,7 +19,7 @@
 
 + (instancetype)shareManager;
 
-/// 今第一次调用有效，不允许交换多次
+/// 仅第一次调用有效，不允许交换多次
 - (void)guard;
 
 @end

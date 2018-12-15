@@ -22,6 +22,10 @@
 - (instancetype)kSwizzleMethodWithClass(__NSPlaceholderSet, initWithObjects:(id  _Nonnull const [])objects count:(NSUInteger)cnt) {
     
     if (objects == nil) {
+        if (cnt == 0) {
+            return [self kSwizzleMethodWithClass(__NSPlaceholderSet, initWithObjects:objects count:cnt)];
+        }
+        
         return nil;
     }
     

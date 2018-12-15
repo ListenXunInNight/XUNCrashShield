@@ -53,7 +53,13 @@
 - (NSArray *)kSwizzleMethodWithClass(__NSPlaceholderArray, initWithObjects:(id  _Nonnull const __unsafe_unretained * _Nonnull)objects count:(NSUInteger)count) {
     
     if (objects == nil) {
-        NSAssert(0, @"空元素初始化数组");
+        if (count == 0) {
+            return [self kSwizzleMethodWithClass(__NSPlaceholderArray, initWithObjects:objects count:count)];
+        }
+        else {
+            NSAssert(0, @"空元素初始化数组");
+        }
+        
         return nil;
     }
     

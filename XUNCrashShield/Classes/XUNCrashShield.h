@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Macro.h"
+#import "NSException+XUNHandler.h"
 
 @protocol XUNCrashShield <NSObject>
 + (void)addCrashField;

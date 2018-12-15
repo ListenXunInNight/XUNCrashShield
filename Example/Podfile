@@ -8,6 +8,6 @@ target 'XUNCrashShield_Example' do
   target 'XUNCrashShield_Tests' do
     inherit! :search_paths
 
-    pod 'FBSnapshotTestCase'
+    
   end
 end
